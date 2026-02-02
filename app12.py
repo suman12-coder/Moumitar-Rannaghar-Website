@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 # Read HTML file
-html_file = Path("moumitar-rannaghar.html")
+html_file = Path("Moumitar-Rannaghar.html")
 html_content = html_file.read_text(encoding="utf-8")
 
 # Render HTML
