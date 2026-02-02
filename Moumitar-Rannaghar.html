@@ -1,0 +1,1685 @@
+
+Action: file_editor create /app/moumitar-rannaghar.html --file-text "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Moumitar Rannaghar - Authentic Bengali Home-Style Restaurant | Joka, Kolkata</title>
+    <meta name=\"description\" content=\"Experience authentic Bengali flavors at Moumitar Rannaghar. Fresh home-cooked meals, traditional recipes, and affordable prices. Order now: 7003514729\">
+    
+    <!-- Google Fonts -->
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+    <link href=\"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">
+    
+    <style>
+        :root {
+            --primary-red: #c8102e;
+            --primary-mustard: #e8b923;
+            --secondary-terracotta: #d4694a;
+            --accent-gold: #c9a85c;
+            --accent-green: #3b6447;
+            --dark-brown: #3d2616;
+            --medium-brown: #6b5347;
+            --light-cream: #f7f5f2;
+            --warm-white: #fffdf9;
+            --soft-grey: #736c64;
+            --text-dark: #1e1919;
+            --text-light: #ffffff;
+            --text-subtle: #736c64;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-strong: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--warm-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+        h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+
+        p {
+            line-height: 1.7;
+            color: var(--text-subtle);
+        }
+
+        button, a {
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.3s ease;
+        }
+
+        button:hover, a:hover {
+            transform: translateY(-2px);
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-terracotta) 100%);
+            color: var(--text-light);
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(200, 16, 46, 0.3);
+            font-size: 1rem;
+        }
+
+        .cta-primary:hover {
+            box-shadow: 0 6px 20px rgba(200, 16, 46, 0.4);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--light-cream);
+            color: var(--dark-brown);
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid var(--primary-red);
+            font-size: 1rem;
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary-red);
+            color: var(--text-light);
+        }
+
+        .cta-tertiary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: transparent;
+            color: var(--text-light);
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid var(--text-light);
+            font-size: 1rem;
+        }
+
+        .cta-tertiary:hover {
+            background: var(--text-light);
+            color: var(--primary-red);
+        }
+
+        .cta-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: #25d366;
+            color: var(--text-light);
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            font-size: 1rem;
+        }
+
+        .cta-whatsapp:hover {
+            background: #20ba5a;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--dark-brown);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-subtle);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: transparent;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(255, 253, 249, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            box-shadow: 0 2px 20px var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h2 {
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            background: none;
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .header.scrolled .nav-link {
+            color: var(--dark-brown);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .call-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: var(--primary-red);
+            color: var(--text-light);
+            font-weight: 600;
+            border-radius: 50px;
+            font-size: 0.95rem;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            color: var(--text-light);
+            padding: 8px;
+            font-size: 1.5rem;
+        }
+
+        .header.scrolled .mobile-menu-toggle {
+            color: var(--dark-brown);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.unsplash.com/photo-1742281258189-3b933879867a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxJbmRpYW4lMjB0aGFsaXxlbnwwfHx8fDE3NjkxNjk0NTl8MA&ixlib=rb-4.1.0&q=85');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(61, 38, 22, 0.85) 0%, rgba(200, 16, 46, 0.7) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero-text {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            color: var(--text-light);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-highlight {
+            color: var(--primary-mustard);
+            display: block;
+            margin-top: 12px;
+        }
+
+        .hero-subtitle {
+            color: var(--light-cream);
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            background: none;
+            color: var(--text-light);
+            animation: bounce 2s infinite;
+            font-size: 2rem;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--light-cream);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            margin-bottom: 60px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .about-text strong {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            background: var(--warm-white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px var(--shadow-strong);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: var(--dark-brown);
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+        }
+
+        .about-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        /* Menu Section */
+        .menu-section {
+            background: var(--warm-white);
+        }
+
+        .menu-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .menu-header {
+            margin-bottom: 50px;
+        }
+
+        .menu-featured {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .featured-item {
+            position: relative;
+            height: 350px;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-item:hover {
+            transform: scale(1.03);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(61, 38, 22, 0.95) 0%, transparent 100%);
+            color: var(--text-light);
+        }
+
+        .featured-overlay h3 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+
+        .featured-overlay p {
+            font-size: 1rem;
+            color: var(--light-cream);
+        }
+
+        .menu-content {
+            margin-bottom: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .menu-category {
+            margin-bottom: 16px;
+        }
+
+        .category-trigger {
+            width: 100%;
+            padding: 24px;
+            background: var(--light-cream);
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .category-trigger:hover {
+            background: #efe9e1;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-emoji {
+            font-size: 1.8rem;
+        }
+
+        .category-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+        }
+
+        .item-count {
+            font-size: 0.95rem;
+            color: var(--text-subtle);
+            font-weight: 400;
+        }
+
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .category-trigger.active .category-icon {
+            transform: rotate(180deg);
+        }
+
+        .menu-items-grid {
+            display: none;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            background: var(--warm-white);
+            border-radius: 0 0 12px 12px;
+        }
+
+        .menu-items-grid.active {
+            display: grid;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 16px;
+            background: var(--light-cream);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background: #efe9e1;
+            transform: translateX(4px);
+        }
+
+        .item-info {
+            flex: 1;
+        }
+
+        .item-name {
+            font-size: 1.1rem;
+            color: var(--dark-brown);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .item-description {
+            font-size: 0.9rem;
+            color: var(--text-subtle);
+            font-style: italic;
+        }
+
+        .item-price {
+            font-size: 1.25rem;
+            color: var(--primary-red);
+            font-weight: 700;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .menu-cta {
+            text-align: center;
+            padding: 60px 30px;
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--warm-white) 100%);
+            border-radius: 20px;
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        .menu-cta h3 {
+            font-size: 2rem;
+            color: var(--dark-brown);
+            margin-bottom: 16px;
+        }
+
+        .menu-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .menu-cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--warm-white) 100%);
+        }
+
+        .why-choose-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .reason-card {
+            background: var(--warm-white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px var(--shadow-strong);
+        }
+
+        .reason-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .reason-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-brown);
+            margin-bottom: 12px;
+        }
+
+        .reason-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding: 60px 40px;
+            background: var(--warm-white);
+            border-radius: 20px;
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: var(--dark-brown);
+            font-weight: 600;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--warm-white);
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-card {
+            background: var(--light-cream);
+            padding: 35px 30px;
+            border-radius: 16px;
+            position: relative;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px var(--shadow-strong);
+        }
+
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--primary-mustard);
+            opacity: 0.3;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: flex;
+            gap: 4px;
+            color: var(--primary-mustard);
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author h4 {
+            font-size: 1.1rem;
+            color: var(--dark-brown);
+            margin-bottom: 4px;
+        }
+
+        .testimonial-author p {
+            font-size: 0.9rem;
+            color: var(--text-subtle);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--warm-white) 100%);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding-right: 20px;
+        }
+
+        .contact-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-subtle);
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h3 {
+            font-size: 1.25rem;
+            color: var(--dark-brown);
+            margin-bottom: 8px;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .contact-item a {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-cta h3 {
+            font-size: 1.75rem;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-map iframe {
+            border-radius: 16px;
+            box-shadow: 0 6px 25px var(--shadow);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-brown);
+            color: var(--light-cream);
+            padding: 60px 40px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary-mustard);
+            margin-bottom: 16px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.25rem;
+            color: var(--light-cream);
+            margin-bottom: 16px;
+        }
+
+        .footer-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--light-cream);
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li button,
+        .footer-section ul li a {
+            background: none;
+            color: var(--light-cream);
+            font-size: 1rem;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section ul li button:hover,
+        .footer-section ul li a:hover {
+            color: var(--primary-mustard);
+            transform: none;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(232, 178, 35, 0.3);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.95rem;
+            color: var(--light-cream);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            section {
+                padding: 60px 20px;
+            }
+
+            .header-content {
+                padding: 0 20px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(61, 38, 22, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            .nav-menu.mobile-open {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .nav-link {
+                color: var(--text-light);
+                font-size: 1.2rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-cta a,
+            .hero-cta button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-subtitle,
+            .contact-cta h3 {
+                text-align: center;
+            }
+
+            .contact-buttons {
+                justify-content: center;
+            }
+
+            .menu-featured {
+                grid-template-columns: 1fr;
+            }
+
+            .about-images {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cta-primary,
+            .cta-secondary,
+            .cta-tertiary,
+            .cta-whatsapp {
+                padding: 12px 24px;
+                font-size: 0.95rem;
+            }
+
+            .reasons-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .menu-cta-buttons,
+            .contact-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class=\"header\" id=\"header\">
+        <div class=\"header-content\">
+            <div class=\"logo\">
+                <h2>Moumitar Rannaghar</h2>
+            </div>
+            
+            <nav class=\"nav-menu\" id=\"navMenu\">
+                <button onclick=\"scrollToSection('about')\" class=\"nav-link\">About</button>
+                <button onclick=\"scrollToSection('menu')\" class=\"nav-link\">Menu</button>
+                <button onclick=\"scrollToSection('why-choose')\" class=\"nav-link\">Why Us</button>
+                <button onclick=\"scrollToSection('contact')\" class=\"nav-link\">Contact</button>
+            </nav>
+
+            <div class=\"header-actions\">
+                <a href=\"tel:7003514729\" class=\"call-btn\">📞 Call Now</a>
+                <button class=\"mobile-menu-toggle\" id=\"mobileMenuToggle\" onclick=\"toggleMobileMenu()\">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class=\"hero-section\">
+        <div class=\"hero-background\"></div>
+        <div class=\"hero-overlay\"></div>
+        <div class=\"hero-content\">
+            <div class=\"hero-text\">
+                <h1 class=\"hero-title\">
+                    Authentic Bengali Flavors,<br>
+                    <span class=\"hero-highlight\">Straight from Mother's Kitchen</span>
+                </h1>
+                <p class=\"hero-subtitle\">
+                    Experience the warmth of homemade Bengali cuisine prepared with love, 
+                    using traditional recipes passed down through generations.
+                </p>
+                <div class=\"hero-cta\">
+                    <a href=\"tel:7003514729\" class=\"cta-primary\">
+                        📞 Call for Delivery
+                    </a>
+                    <a href=\"https://wa.me/917003514729?text=Hello! I'd like to place an order\" 
+                       target=\"_blank\" 
+                       rel=\"noopener noreferrer\"
+                       class=\"cta-secondary\">
+                        💬 Order on WhatsApp
+                    </a>
+                    <button onclick=\"scrollToSection('menu')\" class=\"cta-tertiary\">
+                        View Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button onclick=\"scrollToSection('about')\" class=\"scroll-indicator\">
+            ↓
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id=\"about\" class=\"about-section\">
+        <div class=\"about-container\">
+            <div class=\"about-content\">
+                <h2 class=\"section-title\">Our Story</h2>
+                <p class=\"about-text\">
+                    At <strong>Moumitar Rannaghar</strong>, we believe that the best food comes from the heart. 
+                    What started as a passion for traditional Bengali cooking has grown into a beloved kitchen 
+                    serving authentic homemade meals to families across Kolkata.
+                </p>
+                <p class=\"about-text\">
+                    Every dish we prepare follows time-honored recipes that capture the essence of Bengali cuisine. 
+                    From our aromatic Machher Jhol to our perfectly spiced Chicken Kasha, each meal is cooked 
+                    fresh daily with the same care and attention you'd find in a Bengali home.
+                </p>
+                <p class=\"about-text\">
+                    We source the freshest ingredients, maintain the highest hygiene standards, and cook every 
+                    order with love—just like Ma would make it at home.
+                </p>
+            </div>
+            
+            <div class=\"about-features\">
+                <div class=\"feature-card\">
+                    <div class=\"feature-icon\">❤️</div>
+                    <h3>Made with Love</h3>
+                    <p>Traditional recipes prepared with care and passion</p>
+                </div>
+                
+                <div class=\"feature-card\">
+                    <div class=\"feature-icon\">👨‍🍳</div>
+                    <h3>Authentic Taste</h3>
+                    <p>Genuine Bengali flavors that remind you of home</p>
+                </div>
+                
+                <div class=\"feature-card\">
+                    <div class=\"feature-icon\">🌿</div>
+                    <h3>Fresh Ingredients</h3>
+                    <p>Daily sourced quality ingredients for every dish</p>
+                </div>
+            </div>
+
+            <div class=\"about-images\">
+                <img 
+                    src=\"https://images.unsplash.com/photo-1768729340689-9d4b7c7141a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMEluZGlhbiUyMGhvbWUlMjBjb29raW5nfGVufDB8fHx8MTc2OTE2OTUyOHww&ixlib=rb-4.1.0&q=85\"
+                    alt=\"Traditional cooking\"
+                    class=\"about-image\"
+                >
+                <img 
+                    src=\"https://images.unsplash.com/photo-1716816211590-c15a328a5ff0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBraXRjaGVuJTIwc3BpY2VzfGVufDB8fHx8MTc2OTE2OTUzNnww&ixlib=rb-4.1.0&q=85\"
+                    alt=\"Fresh spices\"
+                    class=\"about-image\"
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id=\"menu\" class=\"menu-section\">
+        <div class=\"menu-container\">
+            <div class=\"menu-header\">
+                <h2 class=\"section-title\">Our Delicious Menu</h2>
+                <p class=\"menu-subtitle\">
+                    Explore our wide range of authentic Bengali dishes, 
+                    prepared fresh daily with traditional recipes
+                </p>
+            </div>
+
+            <div class=\"menu-featured\">
+                <div class=\"featured-item\">
+                    <img 
+                        src=\"https://images.unsplash.com/photo-1589302168068-964664d93dc0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxiaXJ5YW5pfGVufDB8fHx8MTc2OTE2OTQ5OXww&ixlib=rb-4.1.0&q=85\"
+                        alt=\"Biryani Special\"
+                    >
+                    <div class=\"featured-overlay\">
+                        <h3>Chicken & Mutton Biryani</h3>
+                        <p>Our signature biryanis with aromatic spices</p>
+                    </div>
+                </div>
+                <div class=\"featured-item\">
+                    <img 
+                        src=\"https://images.unsplash.com/photo-1654863404432-cac67587e25d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNzl8MHwxfHNlYXJjaHw0fHxCZW5nYWxpJTIwZmlzaCUyMGN1cnJ5fGVufDB8fHx8MTc2OTE2OTQ5M3ww&ixlib=rb-4.1.0&q=85\"
+                        alt=\"Fish Curry\"
+                    >
+                    <div class=\"featured-overlay\">
+                        <h3>Bengali Fish Specials</h3>
+                        <p>Fresh fish prepared in traditional Bengali style</p>
+                    </div>
+                </div>
+                <div class=\"featured-item\">
+                    <img 
+                        src=\"https://images.unsplash.com/photo-1697155406055-2db32d47ca07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxiaXJ5YW5pfGVufDB8fHx8MTc2OTE2OTQ5OXww&ixlib=rb-4.1.0&q=85\"
+                        alt=\"Traditional Bengali Thali\"
+                    >
+                    <div class=\"featured-overlay\">
+                        <h3>Complete Bengali Thali</h3>
+                        <p>Full meal with rice, roti, curry, dal & more</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"menu-content\" id=\"menuContent\">
+                <!-- Menu items will be generated by JavaScript -->
+            </div>
+
+            <div class=\"menu-cta\">
+                <h3>Ready to Order?</h3>
+                <p>Call us or message on WhatsApp to place your order now!</p>
+                <div class=\"menu-cta-buttons\">
+                    <a href=\"tel:7003514729\" class=\"cta-primary\">
+                        📞 Call: 7003514729
+                    </a>
+                    <a 
+                        href=\"https://wa.me/917003514729?text=Hello! I'd like to place an order\" 
+                        target=\"_blank\" 
+                        rel=\"noopener noreferrer\"
+                        class=\"cta-whatsapp\">
+                        💬 Order on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id=\"why-choose\" class=\"why-choose-section\">
+        <div class=\"why-choose-container\">
+            <h2 class=\"section-title\">Why Choose Moumitar Rannaghar?</h2>
+            <p class=\"section-subtitle\">
+                We're not just a restaurant - we're a family that serves food with heart
+            </p>
+            
+            <div class=\"reasons-grid\">
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">🍽️</div>
+                    <h3>Authentic Home-Style Taste</h3>
+                    <p>Every dish prepared with traditional Bengali recipes that remind you of home</p>
+                </div>
+                
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">🛡️</div>
+                    <h3>Hygienic Cooking Standards</h3>
+                    <p>Maintained the highest cleanliness and food safety standards in our kitchen</p>
+                </div>
+                
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">💰</div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Quality Bengali meals at prices that won't break your budget</p>
+                </div>
+                
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">⏰</div>
+                    <h3>Freshly Cooked Daily</h3>
+                    <p>All dishes prepared fresh every day with no compromises on quality</p>
+                </div>
+                
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">👥</div>
+                    <h3>Trusted by Locals</h3>
+                    <p>Serving families across Joka and Kolkata with love and dedication</p>
+                </div>
+                
+                <div class=\"reason-card\">
+                    <div class=\"reason-icon\">⭐</div>
+                    <h3>Wide Menu Selection</h3>
+                    <p>From traditional thalis to special dishes, something for everyone</p>
+                </div>
+            </div>
+
+            <div class=\"stats-section\">
+                <div class=\"stat-item\">
+                    <h3>1000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class=\"stat-item\">
+                    <h3>50+</h3>
+                    <p>Delicious Dishes</p>
+                </div>
+                <div class=\"stat-item\">
+                    <h3>Daily</h3>
+                    <p>Fresh Cooking</p>
+                </div>
+                <div class=\"stat-item\">
+                    <h3>11am-10pm</h3>
+                    <p>Operating Hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class=\"testimonials-section\">
+        <div class=\"testimonials-container\">
+            <h2 class=\"section-title\">What Our Customers Say</h2>
+            <p class=\"section-subtitle\">
+                Trusted by families across Kolkata for authentic Bengali flavors
+            </p>
+            
+            <div class=\"testimonials-grid\">
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">\"</div>
+                    <div class=\"rating\">⭐⭐⭐⭐⭐</div>
+                    <p class=\"testimonial-text\">\"The fish curry reminds me of my mother's cooking. Authentic Bengali taste that you won't find anywhere else in this area!\"</p>
+                    <div class=\"testimonial-author\">
+                        <h4>Priya Chatterjee</h4>
+                        <p>Joka, Kolkata</p>
+                    </div>
+                </div>
+                
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">\"</div>
+                    <div class=\"rating\">⭐⭐⭐⭐⭐</div>
+                    <p class=\"testimonial-text\">\"Best Bengali thali I've had! The combination of dishes is perfect and the pricing is very reasonable. Regular customer now.\"</p>
+                    <div class=\"testimonial-author\">
+                        <h4>Amit Das</h4>
+                        <p>Nalanda Park</p>
+                    </div>
+                </div>
+                
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">\"</div>
+                    <div class=\"rating\">⭐⭐⭐⭐⭐</div>
+                    <p class=\"testimonial-text\">\"Fresh food, hygienic preparation, and the Chingri Malaikari is absolutely divine! Delivery is always on time too.\"</p>
+                    <div class=\"testimonial-author\">
+                        <h4>Sanjukta Roy</h4>
+                        <p>Arabinda Nagar</p>
+                    </div>
+                </div>
+                
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">\"</div>
+                    <div class=\"rating\">⭐⭐⭐⭐⭐</div>
+                    <p class=\"testimonial-text\">\"Being away from home, this place gives me that homely Bengali meal feeling. The mutton kasha is exceptional!\"</p>
+                    <div class=\"testimonial-author\">
+                        <h4>Rajesh Mukherjee</h4>
+                        <p>Joka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id=\"contact\" class=\"contact-section\">
+        <div class=\"contact-container\">
+            <div class=\"contact-content\">
+                <div class=\"contact-info\">
+                    <h2 class=\"section-title\">Visit or Order Now</h2>
+                    <p class=\"contact-subtitle\">
+                        Come visit us or place your order via phone or WhatsApp
+                    </p>
+                    
+                    <div class=\"contact-details\">
+                        <div class=\"contact-item\">
+                            <div class=\"contact-icon\">📍</div>
+                            <div>
+                                <h3>Location</h3>
+                                <p>63/9/1 Nalanda Park, Mahatma Gandhi Rd,<br>near Cancer Hospital, Arabinda Nagar,<br>Joka, Kolkata, West Bengal 700104</p>
+                            </div>
+                        </div>
+
+                        <div class=\"contact-item\">
+                            <div class=\"contact-icon\">⏰</div>
+                            <div>
+                                <h3>Operating Hours</h3>
+                                <p>Daily: 11:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class=\"contact-item\">
+                            <div class=\"contact-icon\">📞</div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p><a href=\"tel:7003514729\">7003514729</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=\"contact-cta\">
+                        <h3>Ready to Order?</h3>
+                        <div class=\"contact-buttons\">
+                            <a href=\"tel:7003514729\" class=\"cta-primary\">
+                                📞 Call Now
+                            </a>
+                            <a 
+                                href=\"https://wa.me/917003514729?text=Hello! I'd like to place an order from Moumitar Rannaghar\" 
+                                target=\"_blank\" 
+                                rel=\"noopener noreferrer\"
+                                class=\"cta-whatsapp\">
+                                💬 WhatsApp Order
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"contact-map\">
+                    <iframe
+                        src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.0!2d88.3639!3d22.4699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDI4JzExLjYiTiA4OMKwMjEnNTAuMCJF!5e0!3m2!1sen!2sin!4v1234567890\"
+                        width=\"100%\"
+                        height=\"450\"
+                        style=\"border: 0; border-radius: 16px;\"
+                        allowfullscreen=\"\"
+                        loading=\"lazy\"
+                        referrerpolicy=\"no-referrer-when-downgrade\"
+                        title=\"Moumitar Rannaghar Location\">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=\"footer\">
+        <div class=\"footer-content\">
+            <div class=\"footer-section\">
+                <h3>Moumitar Rannaghar</h3>
+                <p>Authentic Bengali home-style cuisine prepared with love and traditional recipes.</p>
+            </div>
+
+            <div class=\"footer-section\">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><button onclick=\"scrollToSection('about')\">About Us</button></li>
+                    <li><button onclick=\"scrollToSection('menu')\">Menu</button></li>
+                    <li><button onclick=\"scrollToSection('why-choose')\">Why Choose Us</button></li>
+                    <li><button onclick=\"scrollToSection('contact')\">Contact</button></li>
+                </ul>
+            </div>
+
+            <div class=\"footer-section\">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>📍 Nalanda Park, Joka, Kolkata 700104</li>
+                    <li>📞 <a href=\"tel:7003514729\">7003514729</a></li>
+                    <li>⏰ Daily: 11 AM - 10 PM</li>
+                </ul>
+            </div>
+
+            <div class=\"footer-section\">
+                <h4>Our Services</h4>
+                <ul>
+                    <li>Takeaway Orders</li>
+                    <li>Home Delivery</li>
+                    <li>Limited Dine-in</li>
+                    <li>Fresh Daily Cooking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class=\"footer-bottom\">
+            <p>Made with ❤️ by Moumitar Rannaghar © 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Data
+        const menuData = [
+            {
+                id: \"dal\",
+                name: \"Dal\",
+                emoji: \"🥣\",
+                items: [
+                    { name: \"Sabji Dia Sona Mug\", price: 100 },
+                    { name: \"Macher Matha Dia Mug\", price: 120 },
+                    { name: \"Musur\", price: 80 },
+                    { name: \"Narkel Dia Cholar Dal\", price: 80 },
+                    { name: \"Mix Dal\", price: 90 },
+                    { name: \"Torkar Dal\", price: 110 }
+                ]
+            },
+            {
+                id: \"roti\",
+                name: \"Roti & Breads\",
+                emoji: \"🥞\",
+                items: [
+                    { name: \"Plain Roti (2 Pcs)\", price: 12 },
+                    { name: \"Luchi (4 Pcs)\", price: 50 },
+                    { name: \"Alur Porota (2 Pcs)\", price: 45 },
+                    { name: \"Protin Porota (2 Pcs)\", price: 90 },
+                    { name: \"Methi Porota (2 Pcs)\", price: 80 },
+                    { name: \"Laccha Porota (2 Pcs)\", price: 80 },
+                    { name: \"Naan (Plain)\", price: 30 },
+                    { name: \"Naan (Butter)\", price: 40 },
+                    { name: \"Naan (Garlic)\", price: 55 }
+                ]
+            },
+            {
+                id: \"fish\",
+                name: \"Main Course - Fish\",
+                emoji: \"🐟\",
+                items: [
+                    { name: \"Katla Kalia\", price: 160 },
+                    { name: \"Doi Katla\", price: 180 },
+                    { name: \"Elish Vapa\", price: 450, description: \"Premium Hilsa preparation\" },
+                    { name: \"Elish Jhal\", price: 400, description: \"Spicy Hilsa curry\" },
+                    { name: \"Elish Sorse\", price: 400, description: \"Hilsa in mustard sauce\" },
+                    { name: \"Chingri Malaikari\", price: 410, description: \"Prawn in coconut cream\" },
+                    { name: \"Pomfret Jhal\", price: 350 },
+                    { name: \"Vetkir Jhal\", price: 200 }
+                ]
+            },
+            {
+                id: \"thali-veg\",
+                name: \"Bengali Thali - Veg\",
+                emoji: \"🍱\",
+                items: [
+                    { 
+                        name: \"Classic Veg Thali\", 
+                        price: 280, 
+                        description: \"Plain Rice, Roti, Vaja, 2 Types Sabji, Dal, Papad, Chutney, Mishti\" 
+                    },
+                    { 
+                        name: \"Khichuri Thali\", 
+                        price: 170, 
+                        description: \"Khichuri, Begun Vaja, Alur Dom / Labra, Chutney, Papad, Mishti\" 
+                    }
+                ]
+            },
+            {
+                id: \"thali-nonveg\",
+                name: \"Bengali Thali - Non-Veg\",
+                emoji: \"🍛\",
+                items: [
+                    { 
+                        name: \"Fish & Chicken Thali\", 
+                        price: 390, 
+                        description: \"Plain Rice, Roti, Vaja, Sabji, Dal, Fish, Chicken, Papad, Chutney, Mishti\" 
+                    },
+                    { 
+                        name: \"Fish & Mutton Thali\", 
+                        price: 600, 
+                        description: \"Plain Rice, Roti, Vaja, Sabji, Dal, Fish, Mutton, Papad, Chutney, Mishti\" 
+                    }
+                ]
+            },
+            {
+                id: \"veg\",
+                name: \"Main Course - Veg\",
+                emoji: \"🥦\",
+                items: [
+                    { name: \"Sukto\", price: 100, description: \"Traditional mixed vegetable\" },
+                    { name: \"Alu Posto\", price: 100, description: \"Potato in poppy seed\" },
+                    { name: \"Mochar Ghonto\", price: 130, description: \"Banana flower curry\" },
+                    { name: \"Doi Panner\", price: 190 },
+                    { name: \"Pannerer Rasha\", price: 210 }
+                ]
+            },
+            {
+                id: \"chicken\",
+                name: \"Main Course - Chicken\",
+                emoji: \"🍗\",
+                items: [
+                    { name: \"Chicken Kasha (4 Pcs)\", price: 150, description: \"Dry spicy chicken\" },
+                    { name: \"Desi Murgir Jhol (4 Pcs)\", price: 190 },
+                    { name: \"Posto Chicken (4 Pcs)\", price: 230 },
+                    { name: \"Hyderabadi Chicken (4 Pcs)\", price: 250 },
+                    { name: \"Moumitar Rannaghar Spl Chicken (6 Pcs)\", price: 350 }
+                ]
+            },
+            {
+                id: \"mutton\",
+                name: \"Main Course - Mutton\",
+                emoji: \"🥩\",
+                items: [
+                    { name: \"Mutton Kasha (4 Pcs)\", price: 370, description: \"Slow-cooked spicy mutton\" },
+                    { name: \"Kochi Pathar Jhol (4 Pcs)\", price: 350 },
+                    { name: \"Mutton Rejala (4 Pcs)\", price: 450 },
+                    { name: \"Moumitar Rannaghar Spl Mutton\", price: 600, description: \"Chef's special\" }
+                ]
+            },
+            {
+                id: \"biryani\",
+                name: \"Biryani\",
+                emoji: \"🍚\",
+                items: [
+                    { name: \"Chicken Biryani\", price: 150, description: \"Aromatic rice with tender chicken\" },
+                    { name: \"Mutton Biryani\", price: 220, description: \"Premium mutton biryani\" }
+                ]
+            },
+            {
+                id: \"rice\",
+                name: \"Rice\",
+                emoji: \"🍚\",
+                items: [
+                    { name: \"Plain Rice\", price: 80 },
+                    { name: \"Jeera Rice\", price: 90 },
+                    { name: \"Veg Rice\", price: 110 },
+                    { name: \"Chicken Rice\", price: 140 },
+                    { name: \"Motor Shuti Polao\", price: 140 }
+                ]
+            },
+            {
+                id: \"starters\",
+                name: \"Starters\",
+                emoji: \"🥟\",
+                items: [
+                    { name: \"Panner Pakora (4 Pcs)\", price: 100 },
+                    { name: \"Fish Finger (2 Pcs)\", price: 80 },
+                    { name: \"Chicken Drumstick (6 Pcs)\", price: 150 },
+                    { name: \"Chicken Lollypop (6 Pcs)\", price: 150 }
+                ]
+            }
+        ];
+
+        // Generate Menu HTML
+        function generateMenu() {
+            const menuContent = document.getElementById('menuContent');
+            let html = '';
+            
+            menuData.forEach(category => {
+                html += `
+                    <div class=\"menu-category\">
+                        <button class=\"category-trigger\" onclick=\"toggleCategory('${category.id}')\">
+                            <div class=\"category-header\">
+                                <span class=\"category-emoji\">${category.emoji}</span>
+                                <span class=\"category-name\">${category.name}</span>
+                                <span class=\"item-count\">(${category.items.length} items)</span>
+                            </div>
+                            <span class=\"category-icon\">▼</span>
+                        </button>
+                        <div class=\"menu-items-grid\" id=\"${category.id}\">
+                            ${category.items.map(item => `
+                                <div class=\"menu-item\">
+                                    <div class=\"item-info\">
+                                        <h4 class=\"item-name\">${item.name}</h4>
+                                        ${item.description ? `<p class=\"item-description\">${item.description}</p>` : ''}
+                                    </div>
+                                    <div class=\"item-price\">₹${item.price}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            menuContent.innerHTML = html;
+        }
+
+        // Toggle Menu Category
+        function toggleCategory(categoryId) {
+            const itemsGrid = document.getElementById(categoryId);
+            const trigger = itemsGrid.previousElementSibling;
+            
+            itemsGrid.classList.toggle('active');
+            trigger.classList.toggle('active');
+        }
+
+        // Scroll to Section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                closeMobileMenu();
+            }
+        }
+
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            navMenu.classList.toggle('mobile-open');
+            menuToggle.textContent = navMenu.classList.contains('mobile-open') ? '✕' : '☰';
+        }
+
+        // Close Mobile Menu
+        function closeMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('mobileMenuToggle');
+            navMenu.classList.remove('mobile-open');
+            menuToggle.textContent = '☰';
+        }
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            generateMenu();
+        });
+    </script>
+</body>
+</html>
+"
+Observation: Create successful: /app/moumitar-rannaghar.html
